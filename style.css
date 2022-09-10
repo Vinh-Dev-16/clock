@@ -12,6 +12,11 @@ body{
     background: #2f363e;
     object-fit: contain;
 }
+p{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
 .container{
     position: relative;
     border-radius: 20px;
