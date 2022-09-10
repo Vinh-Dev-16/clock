@@ -11,4 +11,18 @@ setInterval(() =>{
     hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
     mn.style.transform = `rotateZ(${mm}deg)`;
     sc.style.transform = `rotateZ(${ss}deg)`;
+
+    let hours = document.querySelector('#hours');
+    let minutes = document.querySelector('#minutes');
+    let seconds = document.querySelector('#seconds');
+    let ampm = document.querySelector('#ampm');
+
+    let h = new Date().getHours();
+    let m = new Date().getMinutes();
+    let s = new Date().getSeconds();
+
+    hours.innerHTML= h;
+    minutes.innerHTML = m;
+    seconds.innerHTML = s;
 })
+

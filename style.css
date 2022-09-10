@@ -10,6 +10,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: #2f363e;
+    object-fit: contain;
 }
 .container{
     position: relative;
@@ -126,5 +127,33 @@ body{
     inset -5px -5px 15px rgba(0,0,0,0.75);
 }
 #time div{
-
+    position: relative;
+    width: 60px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--clr);
+}
+#time div:nth-child(1)::after,
+#time div:nth-child(2)::after
+{
+    content: ":";
+    position: absolute;
+    right: -4px;
+}
+#time div:last-child{
+    font-size: 0.6em;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+#time div:nth-child(2)::after{
+    animation: animate 1s  infinite;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
